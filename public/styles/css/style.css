@@ -1,0 +1,249 @@
+.start-page {
+  background-color: #522f8b;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0; }
+
+.startBack {
+  background: url(../../img/background-image.jpg) center center fixed;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover; }
+
+.start {
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+  .start button {
+    width: 300px;
+    height: 50px;
+    margin-top: 70px; }
+  .start h1 {
+    margin-top: 60px;
+    margin-bottom: 50px;
+    width: 80%;
+    text-align: center; }
+  .start h4 {
+    margin: 0;
+    width: 80%;
+    text-align: center; }
+
+.navbar-start {
+  background-color: black;
+  height: 38px; }
+  .navbar-start a {
+    float: right; }
+  .navbar-start .login {
+    color: white;
+    margin: 10px 30px; }
+  .navbar-start i {
+    padding-right: 10px; }
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px; }
+  .logo img {
+    width: 120px; }
+
+.register-form {
+  display: flex;
+  justify-content: center;
+  align-content: center; }
+
+.form-width {
+  margin-top: 15%;
+  width: 90%; }
+
+.navbar-tuning {
+  background-color: #522f8b; }
+
+.btn-color {
+  background-color: #FF9900;
+  color: white;
+  width: 100%; }
+
+.brand {
+  display: inline;
+  height: 35px;
+  width: 35px;
+  margin-left: 5px; }
+
+.brand-name {
+  font-family: 'Comfortaa';
+  color: white;
+  font-weight: lighter;
+  display: flex;
+  justify-content: center;
+  text-align: center; }
+  .brand-name h4 {
+    width: 30%;
+    margin-top: -25px;
+    justify-content: center; }
+
+button span {
+  margin-left: 90px; }
+
+.matched {
+  font-weight: lighter; }
+
+.btn-net {
+  color: white; }
+
+.btn-net-face {
+  width: 30%;
+  margin-right: 10px; }
+
+.btn-net-google {
+  width: 30%; }
+
+.sign {
+  color: white; }
+
+.verify {
+  color: #D8D8D8;
+  margin-top: 5%;
+  text-align: center; }
+
+footer {
+  width: 100%;
+  height: 10%;
+  background-color: #522f8b;
+  border-top: 2px solid #000;
+  position: absolute;
+  bottom: 0; }
+
+.pager {
+  color: white;
+  background-color: #522f8b;
+  margin: 10px 0; }
+
+#pager-color {
+  margin: 0; }
+
+#list-tasks {
+  background: #F2F2F2; }
+
+.addTask {
+  display: flex;
+  justify-content: center; }
+
+.addTaskPlus {
+  height: 70px;
+  width: 70px;
+  margin-top: -30px; }
+
+.date {
+  color: #522f8b;
+  text-align: center;
+  font-family: 'Open sans';
+  font-weight: bold; }
+
+#task {
+  display: flex;
+  justify-content: space-between;
+  align-content: center; }
+
+.user-names {
+  width: 200px; }
+
+.checkbox, #check1 {
+  display: inline; }
+
+.list-group {
+  margin-top: 40px;
+  overflow-y: scroll;
+  width: 1024px;
+  height: 350px; }
+
+.list-container {
+  display: flex;
+  justify-content: center; }
+
+.arrow-left a {
+  margin-left: 20px;
+  margin-top: -20px; }
+
+.arrow-rigth a {
+  margin-right: 20px;
+  margin-top: -20px; }
+
+.new-task p {
+  color: #585858;
+  font-weight: 200; }
+
+.task-item {
+  border-bottom: 2px solid #E6E6E6;
+  padding-bottom: 2%; }
+
+.create-button {
+  margin-top: 10%;
+  height: 50px; }
+
+.arrow-nav {
+  color: white; }
+
+.fa-calendar {
+  color: grey;
+  float: right;
+  margin-right: 36px;
+  margin-top: -44px; }
+
+.dropdown-position {
+  float: right; }
+
+input {
+  border: none;
+  width: 100%; }
+
+.start-users {
+  background: url(../../img/background-image-users.jpg) center center fixed;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover; }
+
+.container-users {
+  display: flex;
+  justify-content: center; }
+
+.jordi-image {
+  width: 100px;
+  height: 100px;
+  border: 1px solid white;
+  margin: 0;
+  padding: 0;
+  border-radius: 800px;
+  overflow: hidden;
+  margin: 210px 70px 0 70px; }
+
+.luna-image {
+  width: 100px;
+  height: 100px;
+  border: 1px solid white;
+  margin: 0;
+  padding: 0;
+  border-radius: 800px;
+  overflow: hidden;
+  margin: 210px 70px 0 70px; }
+
+.luna-image:hover {
+  background: black;
+  opacity: 0.5; }
+
+.jordi-image:hover {
+  background: black;
+  opacity: 0.5; }
+
+.user-name {
+  color: white;
+  margin: 50px 70px 0 70px;
+  text-align: center; }
+
+/*# sourceMappingURL=style.css.map */
