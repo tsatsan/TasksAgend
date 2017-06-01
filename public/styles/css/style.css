@@ -123,6 +123,16 @@ footer {
   background: #F2F2F2;
   height: 100%; }
 
+.list-group {
+  margin-top: 40px;
+  overflow-y: scroll;
+  height: 300px; }
+  .list-group .list-group-item:hover {
+    background-color: #E6E6E6; }
+  .list-group a {
+    text-decoration: none;
+    color: grey; }
+
 .addTask {
   display: flex;
   justify-content: center;
@@ -139,21 +149,8 @@ footer {
   font-family: 'Open sans';
   font-weight: bold; }
 
-#task {
-  display: flex;
-  justify-content: space-between;
-  align-content: center; }
-
 .user-names {
   width: 200px; }
-
-.checkbox, #check1 {
-  display: inline; }
-
-.list-group {
-  margin-top: 40px;
-  overflow-y: scroll;
-  height: 300px; }
 
 .new-task p {
   color: #585858;
@@ -162,6 +159,10 @@ footer {
 .task-item {
   border-bottom: 2px solid #E6E6E6;
   padding-bottom: 2%; }
+
+.task {
+  display: flex;
+  justify-content: space-between; }
 
 .create-button {
   margin-top: 10%;
@@ -172,6 +173,9 @@ footer {
   float: right;
   margin-right: 36px;
   margin-top: -44px; }
+  @media (min-width: 550px) {
+    .fa-calendar {
+      margin-right: 150px; } }
 
 .dropdown-position {
   float: right; }
@@ -234,5 +238,9 @@ input {
 
 .arrow-right, .arrow-left {
   color: white; }
+
+#check1 {
+  width: 20px;
+  height: 20px; }
 
 /*# sourceMappingURL=style.css.map */

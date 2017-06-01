@@ -1,3 +1,6 @@
+
+// start page
+
 .start-page {
 	background-color: #522f8b;
 	color: white;
@@ -66,6 +69,7 @@
 	}
 }
 
+// login page
 
 .register-form {
 	display: flex;
@@ -142,6 +146,8 @@ button {
 	text-align: center;
 }
 
+// listTasks page
+
 footer {
 	width: 100%;
 	height: 10%;
@@ -152,10 +158,22 @@ footer {
 
 }
 
-
 #list-tasks{  
 	background: #F2F2F2;
 	height: 100%;
+}
+.list-group {
+	margin-top: 40px;
+	overflow-y: scroll;
+    height: 300px;
+    .list-group-item:hover{
+    	background-color: #E6E6E6;
+    }
+    a {
+    text-decoration: none;
+    color: grey;
+	}
+		
 }
 
 .addTask {
@@ -177,25 +195,11 @@ footer {
 	font-weight: bold;
 }
 
-#task {
-	display: flex;
-	justify-content: space-between;
-	align-content: center;
-}
+
+
 .user-names {
 	width: 200px;
 }
-.checkbox, #check1{
-	display: inline;
-}
-
-.list-group {
-	margin-top: 40px;
-	overflow-y: scroll;
-    height: 300px;
-		
-}
-
 
 .new-task {
 	p {
@@ -207,6 +211,10 @@ footer {
 	border-bottom: 2px solid #E6E6E6;
 	padding-bottom: 2%;
 }
+.task {
+	display: flex;
+	justify-content: space-between;
+}
 .create-button{
 	margin-top: 10%;
 	height: 50px;
@@ -217,6 +225,9 @@ footer {
 	float: right;
 	margin-right: 36px;
 	margin-top: -44px;
+	@media (min-width: 550px) {
+    margin-right: 150px;
+  }
 }
 
 .dropdown-position{
@@ -293,10 +304,12 @@ background-color: #522f8b;
 
 .arrow-right, .arrow-left{
 
-	color: white;
+color: white;
 
 }
+#check1{
+	width: 20px;
+	height: 20px;
 
-
-
+}
 
