@@ -69,19 +69,27 @@
   color: white;
   width: 100%; }
 
+.btn {
+  padding: 14px 12px; }
+
 .brand {
   display: inline;
+  float: left;
   height: 35px;
   width: 35px;
   margin-left: 5px; }
 
+.logo-name {
+  display: flex;
+  flex-direction: row;
+  width: 100px; }
+
 .brand-name {
+  display: flex;
+  justify-content: space-between;
   font-family: 'Comfortaa';
   color: white;
-  font-weight: lighter;
-  display: flex;
-  justify-content: center;
-  text-align: center; }
+  font-weight: lighter; }
   .brand-name h4 {
     width: 30%;
     margin-top: -25px;
@@ -159,7 +167,7 @@ footer {
   color: #585858;
   font-weight: 200; }
 
-.task-item {
+.task-item, .detail-item, .new-task-text {
   border-bottom: 2px solid #E6E6E6;
   padding-bottom: 2%; }
 
@@ -169,7 +177,8 @@ footer {
 
 .create-button {
   margin-top: 10%;
-  height: 50px; }
+  height: 50px;
+  padding: 14px 12px; }
 
 .fa-calendar {
   color: grey;
@@ -183,7 +192,7 @@ footer {
 .dropdown-position {
   float: right; }
 
-input {
+input, textarea {
   border: none;
   width: 100%; }
 
@@ -245,5 +254,14 @@ input {
 #check1 {
   width: 20px;
   height: 20px; }
+
+.login-list-tasks {
+  color: white;
+  background-color: #522f8b;
+  float: right;
+  margin: 18px; }
+
+textarea {
+  height: 70px; }
 
 /*# sourceMappingURL=style.css.map */
