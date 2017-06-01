@@ -152,6 +152,9 @@ footer {
 .user-names {
   width: 200px; }
 
+.arrow-nav i {
+  color: white; }
+
 .new-task p {
   color: #585858;
   font-weight: 200; }
