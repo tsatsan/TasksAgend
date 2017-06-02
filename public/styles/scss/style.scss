@@ -84,7 +84,7 @@
 	margin-top: 5%;
 
 	@media (min-width: 768px){
-		width: 100%;
+		width: 150%;
 	}
 	@media (max-width: 768px){
 		width:70%;
@@ -267,6 +267,7 @@ footer {
 .task {
 	display: flex;
 	justify-content: space-between;
+	padding: 0;
 }
 .create-button{
 	margin-top: 10%;
@@ -399,4 +400,8 @@ textarea {
 	@media (min-width: 768px){
 		width: 100%;
 	}
+}
+.completed-task{
+	color: green;
+	padding: 0 5px 0 5px;
 }
