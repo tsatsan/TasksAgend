@@ -4,7 +4,7 @@
 .start-page {
 	background-color: #522f8b;
 	color: white;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Droid Sans', sans-serif;
 	font-weight: lighter;
 	display: flex;
 	flex-direction: column;
@@ -100,25 +100,21 @@
 	float: left;
 	height: 35px;
 	width: 35px;
-	margin-left: 5px;
+	margin-left: 2px;
 }
 .logo-name {
 	display: flex;
 	flex-direction: row;
 	width: 100px;
+	font-family: 'Comfortaa';
 }
 .brand-name {
 	display: flex;
 	justify-content: space-between;
-	font-family: 'Comfortaa';
+	font-family:  sans-serif;
 	color: white;
 	font-weight: lighter;
-	
-	h4{
-		width: 30%;
-		margin-top: -25px;
-		justify-content: center;
-	}
+
 }
 
 button {
@@ -165,7 +161,10 @@ footer {
 	bottom: 0;
 
 }
-
+.nav-list-tasks{
+	margin-top: 18px;
+	font-family: 'Droid Sans', sans-serif;
+}
 #list-tasks{  
 	background: #F2F2F2;
 	height: 100%;
@@ -199,11 +198,9 @@ footer {
 .date {
 	color: #522f8b;
 	text-align: center;
-	font-family: 'Open sans';
+	font-family: 'Droid Sans', sans-serif;
 	font-weight: bold;
 }
-
-
 
 .user-names {
 	width: 200px;
@@ -212,10 +209,11 @@ footer {
 .arrow-nav {
 	i{color: white;}
 }
-.new-task {
+.new-task, .new-task-text {
 	p {
 		color: #585858;
 		font-weight: 200;
+		padding-top: 5px;
 	}
 }
 .task-item, .detail-item, .new-task-text{
@@ -223,6 +221,18 @@ footer {
 	padding-bottom: 2%;
 }
 
+.brand-name-newTask, .brand-name-itemTask{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    color: white;
+    h4 {
+    	width: 100%;
+		margin-top: -25px;
+		justify-content: center;
+		font-weight: lighter;
+    }
+}
 .task {
 	display: flex;
 	justify-content: space-between;
@@ -231,7 +241,11 @@ footer {
 	margin-top: 10%;
 	height: 50px;
 	padding:14px 12px;
-
+	font-weight: bold;
+	a{
+		color: white;
+		font-weight: bold;
+	}
 }
 
 .fa-calendar {
@@ -319,8 +333,8 @@ background-color: #522f8b;
 .arrow-right, .arrow-left{
 
 color: white;
-
 }
+
 #check1{
 	width: 20px;
 	height: 20px;
@@ -336,3 +350,4 @@ color: white;
 textarea {
 	height: 70px;
 }
+
