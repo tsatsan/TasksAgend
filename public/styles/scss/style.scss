@@ -14,11 +14,12 @@
 }
 
 .startBack {
-	background: url(../../img/background-image.jpg) center center fixed;
+	background: url(../../img/background-image-users.jpg) center center fixed;
 	background-repeat: no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
+
 
 }
 
@@ -76,16 +77,36 @@
 	justify-content: center;
 	align-content: center;
 }
-
+.brand-apaisat{
+	width: 45%;
+}
 .form-width {
-	margin-top: 15%;
-	width: 90%;
+	margin-top: 5%;
+
+	@media (min-width: 768px){
+		width: 100%;
+	}
+	@media (max-width: 768px){
+		width:70%;
+	}
+}
+.form-name {
+	display: flex;
+	justify-content: space-between;
 }
 
-.navbar-tuning {
+#navbar-tuning {
+	background-color: black;
+	min-height: 40px;
+	margin-bottom: 0;
+}
+#navbar-tuning-tasks {
 	background-color: #522f8b;
 }
 
+.navbar-brand {
+	    padding: 0 0 0 35px;
+}
 .btn-color {
 	background-color: #FF9900;
 	color: white;
@@ -107,6 +128,12 @@
 	flex-direction: row;
 	width: 100px;
 	font-family: 'Comfortaa';
+}
+.msg-acount {
+	color: white;
+	text-align: center;
+	font-family: 'Droid Sans', sans-serif;
+	margin-bottom: 40px;
 }
 .brand-name {
 	display: flex;
@@ -132,21 +159,25 @@ button {
 }
 
 .btn-net-face {
-	width: 30%;
+	width: 23%;
 	margin-right: 10px;
+	background-color: #424242;
 }
 
 .btn-net-google {
-	width: 30%;
+	width: 23%;
+	background-color: #424242;
 }
 
 .sign {
 	color: white;
 }
+#inputLastName3{
+	margin-left: 20px;
+}
 
 .verify {
 	color: #D8D8D8;
-	margin-top: 5%;
 	text-align: center;
 }
 
@@ -347,7 +378,25 @@ color: white;
 	margin: 18px;
 
 }
+.login {
+	color: white;
+	float: right;
+	margin: 10px 10px 0 0;
+	i{
+    padding-right: 5px;
+	}
+}
 textarea {
 	height: 70px;
 }
 
+.navbar-brand{
+	@media (min-width: 0px) and (max-width: 768px){
+		display: none;
+  }
+}
+.container {
+	@media (min-width: 768px){
+		width: 100%;
+	}
+}

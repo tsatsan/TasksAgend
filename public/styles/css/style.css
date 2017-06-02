@@ -9,7 +9,7 @@
   margin: 0; }
 
 .startBack {
-  background: url(../../img/background-image.jpg) center center fixed;
+  background: url(../../img/background-image-users.jpg) center center fixed;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -57,12 +57,32 @@
   justify-content: center;
   align-content: center; }
 
-.form-width {
-  margin-top: 15%;
-  width: 90%; }
+.brand-apaisat {
+  width: 45%; }
 
-.navbar-tuning {
+.form-width {
+  margin-top: 5%; }
+  @media (min-width: 768px) {
+    .form-width {
+      width: 100%; } }
+  @media (max-width: 768px) {
+    .form-width {
+      width: 70%; } }
+
+.form-name {
+  display: flex;
+  justify-content: space-between; }
+
+#navbar-tuning {
+  background-color: black;
+  min-height: 40px;
+  margin-bottom: 0; }
+
+#navbar-tuning-tasks {
   background-color: #522f8b; }
+
+.navbar-brand {
+  padding: 0 0 0 35px; }
 
 .btn-color {
   background-color: #FF9900;
@@ -85,6 +105,12 @@
   width: 100px;
   font-family: 'Comfortaa'; }
 
+.msg-acount {
+  color: white;
+  text-align: center;
+  font-family: 'Droid Sans', sans-serif;
+  margin-bottom: 40px; }
+
 .brand-name {
   display: flex;
   justify-content: space-between;
@@ -102,18 +128,22 @@ button span {
   color: white; }
 
 .btn-net-face {
-  width: 30%;
-  margin-right: 10px; }
+  width: 23%;
+  margin-right: 10px;
+  background-color: #424242; }
 
 .btn-net-google {
-  width: 30%; }
+  width: 23%;
+  background-color: #424242; }
 
 .sign {
   color: white; }
 
+#inputLastName3 {
+  margin-left: 20px; }
+
 .verify {
   color: #D8D8D8;
-  margin-top: 5%;
   text-align: center; }
 
 footer {
@@ -278,7 +308,22 @@ input, textarea {
   float: right;
   margin: 18px; }
 
+.login {
+  color: white;
+  float: right;
+  margin: 10px 10px 0 0; }
+  .login i {
+    padding-right: 5px; }
+
 textarea {
   height: 70px; }
+
+@media (min-width: 0px) and (max-width: 768px) {
+  .navbar-brand {
+    display: none; } }
+
+@media (min-width: 768px) {
+  .container {
+    width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */
