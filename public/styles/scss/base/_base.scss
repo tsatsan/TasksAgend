@@ -1,0 +1,102 @@
+// base elements 
+.btn-color {
+	background-color: $c-orange;
+	color: $c-white;
+	width: 100%;
+}
+
+.btn {
+	padding: 14px 12px;
+}
+
+button {
+	span {
+		margin-left: 90px;
+	}
+}
+.btn-net {
+	color: $c-white;
+}
+
+.btn-net-face {
+	width: 23%;
+	margin-right: 10px;
+	background-color: $c-gray-moreFort;
+}
+
+.btn-net-google {
+	width: 23%;
+	background-color: $c-gray-moreFort;
+}
+
+.brand-apaisat{
+	width: 45%;
+}
+
+.register-form {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
+.form-width {
+	margin-top: 5%;
+
+	@media (min-width: $bp-medium){
+		width: 100%;
+	}
+	@media (max-width: $bp-medium){
+		width:70%;
+	}
+}
+.form-name {
+	display: flex;
+	justify-content: space-between;
+}
+
+.brand {
+	display: inline;
+	float: left;
+	height: 35px;
+	width: 35px;
+	margin-left: 2px;
+}
+
+.brand-name {
+	display: flex;
+	justify-content: space-between;
+	font-family:  $ff-base;
+	color: white;
+	font-weight: $fw-light;
+
+}
+textarea {
+	height: 70px;
+}
+.login-list-tasks {
+	color: white;
+	background-color: $c-purple;
+	float: right;
+	margin: 18px;
+
+}
+.login {
+	color: $c-white;
+	float: right;
+	margin: 10px 10px 0 0;
+	i{
+    padding-right: 5px;
+	}
+}
+input, textarea{
+	border: none;
+	width: 100%;
+}
+.arrow-right, .arrow-left{
+	color: $c-white;
+}
+.container {
+	@media (min-width: $bp-medium){
+		width: 100%;
+	}
+}

@@ -1,0 +1,66 @@
+// Index page
+
+.start-page {
+	background-color: $c-purple;
+	color: white;
+	font-family: $ff-base;
+	font-weight: $fw-light;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0;
+
+}
+.startBack {
+	background: url(../../img/background-image-users.jpg) center center fixed;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+
+}
+.start{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	button{
+		width: 300px;
+		height: 50px;
+		margin-top: 70px;
+	}
+	h1 {
+		margin-top: 60px;
+		margin-bottom: 50px;
+		width: 80%;
+		text-align: center;
+	}
+
+	h4 {
+		margin: 0;
+		width: 80%;
+		text-align: center;
+	}
+}
+.navbar-start {
+	background-color: $c-black;
+	height: 38px;
+	a{
+		float: right;
+	}
+	.login {
+		color: white;
+		margin: 10px 30px;
+	}
+	i {
+		padding-right: 10px;
+	}
+}
+.logo{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 35px;
+	img{
+		width: 120px;
+	}
+}

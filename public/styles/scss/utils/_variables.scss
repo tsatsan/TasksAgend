@@ -1,0 +1,34 @@
+// Variables
+// --------------------------------------------------------------
+
+// Colors
+$c-white:				    #fff;
+$c-purple:				    #522f8b;
+$c-orange:				    #FF9900;
+$c-gray:				    #E6E6E6;
+$c-gray-loose:			    #F2F2F2;
+$c-gray-fort:			    #424242;
+$c-gray-moreFort:		    #585858;
+$c-black:				    #000000;
+
+
+// Typography
+
+// Font Weights
+$fw-light:				200;
+$fw-regular:			400;
+$fw-bold:				600;
+
+//logo Fonts
+$ff-logo:       		('Comfortaa', sans-serif);
+
+// Base Fonts
+$ff-base:         		('Droid Sans', sans-serif);
+$fw-base:				$fw-regular;
+$fz-base:				14px;
+$lh-base:				1.8;
+
+
+// Breakpoints
+$bp-medium:          768px;     //768px
+$bp-large:           1024px;     //1024px

@@ -6,8 +6,9 @@
   "scripts": {
     "prestart": "npm install",
     "postinstall": "bower install",
-    "start": "node app",
-    "dev": "nodemon app"
+    "start": "node server/app",
+    "dev": "nodemon server/app",
+    "dev:debug": "DEBUG=*,-express:router*,-nodemon* npm run dev"
   },
   "repository": {
     "type": "git",
@@ -21,11 +22,13 @@
   },
   "homepage": "https://github.com/SkylabCoders/demo-heroku-website#readme",
   "dependencies": {
+    "body-parser": "^1.17.2",
     "bower": "^1.8.0",
+    "debug": "^2.6.8",
     "express": "^4.15.3",
-    "dotenv": "^4.0.0"
+    "mongoose": "^4.10.4"
   },
   "devDependencies": {
-    "nodemon": "^1.11.0"
+    "dotenv": "^4.0.0"
   }
 }

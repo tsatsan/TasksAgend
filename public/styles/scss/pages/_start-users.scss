@@ -1,0 +1,43 @@
+// start-users page
+
+.start-users {
+	background: url(../../img/background-image-users.jpg) center center fixed;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+}
+.container-users {
+	display: flex;
+	justify-content: center;
+}
+
+
+.jordi-image {
+	width: 100px;
+	height: 100px;
+	border: 1px solid $c-white;
+	margin: 0;
+	padding: 0;
+	border-radius: 800px;
+	overflow: hidden;
+	margin: 210px 70px 0 70px;
+
+}
+.luna-image{
+	width: 100px;
+	height: 100px;
+	border: 1px solid $c-white;
+	margin: 0;
+	padding: 0;
+	border-radius: 800px;
+	overflow: hidden;
+	margin: 210px 70px 0 70px;
+	
+
+}
+
+.luna-image:hover, .jordi-image:hover{ 
+	background: $c-black;
+	opacity: 0.5;
+}

@@ -1,0 +1,52 @@
+<body id="list-tasks">
+    <nav id="navbar-tuning-tasks">
+        <div class="container-fluid">
+            <div class="brand-name">
+                <div class="logo-name">
+                    <a class="navbar-brand" href="index.html">
+                        <img alt="Brand" class='brand' src="img/taskagend.png">
+                    </a>
+                    <h3>taskagen</h3>
+                </div>
+                <h4 class="nav-list-tasks">List Tasks</h4>
+                <a class="login-list-tasks" href="sign_in.html"><i class="fa fa-user-o" aria-hidden="true"></i>{{ nameUser }}</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="list-container">
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="task in tasks">
+                    <ul class="task ">
+                        <li  class="title list-unstyled"><i class="completed-task fa fa-check" aria-hidden="true"></i>{{task.nameUser}}> {{task.nameUser2}}</li></strike>
+                  
+                        <li class="title list-unstyled"><a href="detailTask.html">{{task.title}}</a></li>
+                       
+                        <li class="title list-unstyled"><a>{{task.description}}</a></li>
+        
+                        <li class="list-unstyled">
+                            <input id="check1" type="checkbox" name="check" value="check1">
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="date">
+        <h2>02 June 2017</h2>
+    </div>
+    <div class="calendar">
+        <i class="fa fa-calendar fa-3x" aria-hidden="true"></i>
+    </div>
+    <footer>
+        <div class="addTask">
+            <a href="#/newTask"><img src="img/add.png" class="addTaskPlus"></a>
+        </div>
+        <div class="pager-arrows">
+            <a href="#" class="arrow-left"><i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i></a>
+            <a href="#" class="arrow-right"><i class="fa fa-arrow-right fa-3x" aria-hidden="true"></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+/*  list-tasks page */
+
+.nav-list-tasks{
+	margin-top: 18px;
+	font-family: $ff-base;
+}
+#list-tasks{  
+	background: $c-gray-loose;
+	height: 100%;
+}
+.list-group {
+	margin-top: 40px;
+	overflow-y: scroll;
+    height: 300px;
+    .list-group-item:hover{
+    	background-color: $c-gray;
+    }
+    a {
+    text-decoration: none;
+    color: $c-gray;
+	}		
+}
+.addTask {
+	display: flex;
+	justify-content: center;
+	margin-bottom:-33px;
+}
+
+.addTaskPlus {
+	height: 70px;
+	width: 70px;
+	margin-top: -30px;
+}
+
+.date {
+	color: $c-purple;
+	text-align: center;
+	font-family: $ff-base;
+	font-weight: bold;
+}
+
+.user-names {
+	width: 200px;
+}
+
+.arrow-nav {
+	i {
+		color: $c-white;
+	}
+}
+.new-task, .new-task-text {
+	p {
+		color: $c-gray-moreFort;
+		font-weight: 200;
+		padding-top: 5px;
+	}
+}
+.task-item, .detail-item, .new-task-text{
+	border-bottom: 2px solid $c-gray;
+	padding-bottom: 2%;
+}
+
+.brand-name-newTask, .brand-name-itemTask{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    color: white;
+    h4 {
+    	width: 100%;
+		margin-top: -25px;
+		justify-content: center;
+		font-weight: $fw-light;
+    }
+}
+.task {
+	display: flex;
+	justify-content: space-between;
+	padding: 0;
+}
+.create-button{
+	margin-top: 10%;
+	height: 50px;
+	padding:14px 12px;
+	font-weight: bold;
+	a{
+		color: $c-white;
+		font-weight: bold;
+	}
+}
+.fa-calendar {
+	color: $c-gray;
+	float: right;
+	margin-right: 36px;
+	margin-top: -44px;
+	@media (min-width: 550px) {
+    margin-right: 150px;
+  }
+}
+.dropdown-position{
+	float: right;
+}
+.completed-task{
+	color: green;
+	padding: 0 5px 0 5px;
+}
+.matched {
+	font-weight: $fw-light;
+	color: $c-gray;
+}
+
+.logo-name {
+	display: flex;
+	flex-direction: row;
+	width: 100px;
+	font-family: $ff-logo;
+}
+.pager-arrows{
+	display: flex;
+	justify-content: space-between;
+	background-color: $c-purple;
+}
+.user-name {
+	color: $c-white;
+	margin: 50px 70px 0 70px;
+	text-align: center;
+}
+#check1{
+	width: 20px;
+	height: 20px;
+
+}
+.title>a{
+	color: $c-black;
+}
