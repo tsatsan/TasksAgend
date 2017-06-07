@@ -4,7 +4,6 @@ const mongoose = require('mongoose')
 const path = require('path')
 const moment = require('moment')
 
-
 const routerTasks = require('./routes/tasks')
 const routerTask = require('./routes/task')
 
@@ -17,7 +16,7 @@ const PORT = process.env.PORT
 const app = express()
 
 mongoose.Promise = Promise
-mongoose.connect(dbUrl)
+mongoose.connect('mongodb://admin:admin100@ds155411.mlab.com:55411/test_skylab')
 
 app.use(express.static(path.join(__dirname + '/..', 'public')))
 
