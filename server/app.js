@@ -16,7 +16,7 @@ const PORT = process.env.PORT
 const app = express()
 
 mongoose.Promise = Promise
-mongoose.connect('mongodb://admin:admin100@ds155411.mlab.com:55411/test_skylab')
+mongoose.connect(dbUrl)
 
 app.use(express.static(path.join(__dirname + '/..', 'public')))
 
