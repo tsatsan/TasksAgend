@@ -1,16 +1,17 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
+const collection = 'tasks'
 
 const TaskSchema = new Schema({
   title: {
     type: String,
     required: true
   },
-  nameUser: {
+  userName: {
     type: String,
     required: true
   },
-  nameUser2: {
+  userName2: {
     type: String,
     required: true
   },
@@ -18,19 +19,15 @@ const TaskSchema = new Schema({
     type: Boolean,
     default: false
   },
-  createdAdd: {
-    type: Number,
-    default: +new Date()
-  },
-  dateTask: {
-    type: Date,
+  dateRealized: {
+    type: String,
     required: true
   },
   description: {
     type: String,
     required: true
   }
-})
+}, { collection })
 const Task = mongoose.model('Task', TaskSchema)
 
 module.exports = Task

@@ -18,7 +18,7 @@
             <ul class="list-group">
                 <li class="list-group-item" ng-repeat="task in tasks">
                     <ul class="task ">
-                        <li  class="title list-unstyled"><i class="completed-task fa fa-check" aria-hidden="true"></i>{{task.nameUser}}> {{task.nameUser2}}</li></strike>
+                        <li  class="title list-unstyled"><i class="completed-task fa fa-check" aria-hidden="true"></i>{{task.userName}}> {{task.userName2}}</li></strike>
                   
                         <li class="title list-unstyled"><a href="detailTask.html">{{task.title}}</a></li>
                        
@@ -33,7 +33,7 @@
         </div>
     </div>
     <div class="date">
-        <h2>02 June 2017</h2>
+        <h2 ng-bind="date | date:'dd/MM/yyyy'">{{date}}</h2>
     </div>
     <div class="calendar">
         <i class="fa fa-calendar fa-3x" aria-hidden="true"></i>
@@ -43,8 +43,8 @@
             <a href="#/newTask"><img src="img/add.png" class="addTaskPlus"></a>
         </div>
         <div class="pager-arrows">
-            <a href="#" class="arrow-left"><i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i></a>
-            <a href="#" class="arrow-right"><i class="fa fa-arrow-right fa-3x" aria-hidden="true"></i></a>
+            <button ng-click="movingDayBack()" class="arrow-left"><i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i></button>
+            <button ng-click="movingDayNext()" class="arrow-right"><i class="fa fa-arrow-right fa-3x" aria-hidden="true"></i></button>
         </div>
     </footer>
 </body>

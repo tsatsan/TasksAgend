@@ -1,9 +1,10 @@
 const Task = require('../../../models/Task')
 
 function addTask (req, res) {
-  const {title, nameUser, nameUser2, description, dateCreation, dateRealized} = req.body
-  const newTask = new Task({title, nameUser, nameUser2, description, dateCreation, dateRealized})
-  console.log(newTask)
+  const {title, userName, userName2, description, dateRealized} = req.body
+  const newTask = new Task({title, userName, userName2, description, dateRealized})
+  console.log(req.body)
+
   newTask.save()
     .then(msg => {
       res.json(msg)

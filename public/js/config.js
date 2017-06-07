@@ -15,7 +15,11 @@ angular.module('tasksAgend', ['ngRoute'])
         controller: 'tasksController'
       })
       .when('/newTask', {
-        templateUrl: 'templates/NewTask.html',
+        templateUrl: 'templates/newTask.html',
         controller: 'newTaskController'
+      })
+      .when('/startUsers', {
+        templateUrl: 'templates/startUsers.html',
+        controller: 'startUsersController'
       })
   })

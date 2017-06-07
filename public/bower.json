@@ -3,19 +3,20 @@
   "description": "",
   "main": "index.js",
   "authors": [
-    "JuanMa Garrido <JuanMa.Garrido@gmail.com>"
+    "Tsatsan <jordicostafigueras@gmail.com>"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/SkylabCoders/demo-heroku-website",
+  "homepage": "https://github.com/tsatsan/final-project",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
-    "client/bower_components",
+    "public/bower_components",
     "test",
     "tests"
   ],
   "dependencies": {
+    "jquery": "1.9.1 - 3",
     "bootstrap": "^3.3.7"
   }
 }

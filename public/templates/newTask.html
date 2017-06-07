@@ -1,7 +1,7 @@
 <nav class="navbar" id="navbar-tuning-tasks">
     <div class="container-fluid">
         <div class="arrow-nav">
-            <a href="/"><i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i></a>
+            <a href="/#/listTasks"><i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i></a>
         </div>
         <div class="brand-name-newTask">
             <h4>New Task</h4>
@@ -9,7 +9,7 @@
     </div>
 </nav>
 <div class="container">
-    <form>
+    <form ng-submit="addNewTask()">
      <div class="new-task">
             <p>FROM</p>
             <input class="task-item" ng-model="userName" autofocus>
@@ -19,12 +19,8 @@
             <input class="task-item" ng-model="userName2" autofocus>
         </div>
         <div class="new-task">
-            <p>DATA CREATION</p>
-            <input class="task-item" type="date" ng-model="dateTaskCreate" autofocus>
-        </div>
-        <div class="new-task">
             <p>DATA</p>
-            <input class="task-item" type="date" ng-model="dateTaskRealized" autofocus>
+            <input class="task-item" type="date" ng-model="dateRealized" autofocus>
         </div>
         <div class="new-task">
             <p>TITLE TASK</p>
@@ -34,8 +30,9 @@
             <p>DESCRIPTION</p>
             <textarea ng-model="description"></textarea>
         </div>
-    </form>
-    <div>
-        <button class="btn btn-color create-button btn-net" ng-click='addNewTask(userName, userName2)'>CREATE</button>
+        <div>
+        <button class="btn btn-color create-button btn-net" type="submit">CREATE</button>
     </div>
+    </form>
+    
 </div>

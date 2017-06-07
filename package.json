@@ -7,8 +7,7 @@
     "prestart": "npm install",
     "postinstall": "bower install",
     "start": "node server/app",
-    "dev": "nodemon server/app",
-    "dev:debug": "DEBUG=*,-express:router*,-nodemon* npm run dev"
+    "dev": "nodemon server/app"
   },
   "repository": {
     "type": "git",
@@ -25,10 +24,10 @@
     "body-parser": "^1.17.2",
     "bower": "^1.8.0",
     "debug": "^2.6.8",
+    "dotenv": "^4.0.0",
     "express": "^4.15.3",
     "mongoose": "^4.10.4"
   },
   "devDependencies": {
-    "dotenv": "^4.0.0"
   }
 }
