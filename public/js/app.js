@@ -1,1 +1,1 @@
-angular.module('tasksAgend', ['ngRoute'])
+angular.module('tasksAgend', ['ngRoute', 'angularMoment'])

@@ -19,11 +19,11 @@
                 <li class="list-group-item" ng-repeat="task in tasks">
                     <ul class="task ">
                         <li  class="title list-unstyled"><i class="completed-task fa fa-check" aria-hidden="true"></i>{{task.userName}}> {{task.userName2}}</li></strike>
-                  
+
                         <li class="title list-unstyled"><a href="detailTask.html">{{task.title}}</a></li>
-                       
+
                         <li class="title list-unstyled"><a>{{task.description}}</a></li>
-        
+
                         <li class="list-unstyled">
                             <input id="check1" type="checkbox" name="check" value="check1">
                         </li>
@@ -33,7 +33,7 @@
         </div>
     </div>
     <div class="date">
-        <h2 ng-bind="date | date:'dd/MM/yyyy'">{{date}}</h2>
+        <h2 ng-bind="selectedDay | date:'dd/MM/yyyy'">{{selectedDay}}</h2>
     </div>
     <div class="calendar">
         <i class="fa fa-calendar fa-3x" aria-hidden="true"></i>

@@ -5,11 +5,10 @@ const path = require('path')
 const moment = require('moment')
 
 const routerTasks = require('./routes/tasks')
-const routerTask = require('./routes/task')
+// const routerTask = require('./routes/task')
 
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config()
-}
+require('dotenv').load()
+
 const dbUrl = process.env.DB_URI
 const PORT = process.env.PORT
 
@@ -30,7 +29,7 @@ app.use(bodyParser.json())
 // })
 
 app.use('/tasks', routerTasks)
-app.use('/task', routerTask)
+// app.use('/task', routerTask)
 
 app.listen(PORT)
 console.log(`Listening on PORT ${PORT}`)

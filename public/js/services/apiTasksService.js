@@ -11,8 +11,7 @@ angular.module('tasksAgend')
                 .then(response => response.data)
       }
       function getTaskByDate (date) {
-        return $http.get('/task?dateRealized=' + date)
-        console.log(date)
+        return $http.get('/tasks/date/' + date)
                 .then(response => response.data)
       }
       return {

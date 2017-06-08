@@ -1,9 +1,12 @@
 const Task = require('../../../models/Task')
+const moment = require('moment')
 
 function addTask (req, res) {
-  const {title, userName, userName2, description, dateRealized} = req.body
+  let {title, userName, userName2, description, dateRealized} = req.body
+  dateRealized = moment(+dateRealized).valueOf()
   const newTask = new Task({title, userName, userName2, description, dateRealized})
-  console.log(req.body)
+  
+  console.log( 'req body' + newTask)
 
   newTask.save()
     .then(msg => {

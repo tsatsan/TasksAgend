@@ -1,26 +1,19 @@
 angular.module('tasksAgend')
-      .controller('tasksController', function ($scope, $rootScope, apiTasksService) {
-        $rootScope.date = new Date()
-        var tomorrow = $scope.date
-       
-        // const newTomorrow = tomorrow.setDate(tomorrow.getDate()) 
-        apiTasksService.getTaskByDate(tomorrow)
-	          .then(tasks => {
-	            $scope.tasks = tasks
-	          })
+	.controller('tasksController', function ($scope, $timeout, apiTasksService) {
+  const today = +new Date()
+  $scope.selectedDay = today
 
-   
-        $scope.movingDayNext = function () {
-          var tomorrow = $scope.date
-          newTomorrow = tomorrow.setDate(tomorrow.getDate() + 1)
-	          apiTasksService.getTaskByDate(newTomorrow)
-	          .then(tasks => {
-	            $scope.tasks = tasks
-	          })
-        }
-        $scope.movingDayBack = function () {
-          var yesterday = $scope.date
-          yesterday.setDate(yesterday.getDate() - 1)
-          console.log(yesterday)
-        }
-      })
+  apiTasksService.getTaskByDate($scope.selectedDay)
+			.then(tasks => $scope.tasks = tasks)
+
+  $scope.movingDayNext = function () {
+    $scope.selectedDay = moment($scope.selectedDay).add(1, 'days').valueOf()
+    apiTasksService.getTaskByDate($scope.selectedDay)
+			.then(tasks => $scope.tasks = tasks)
+  }
+  $scope.movingDayBack = function () {
+    $scope.selectedDay = moment($scope.selectedDay).subtract(1, 'days').valueOf()
+    apiTasksService.getTaskByDate($scope.selectedDay)
+			.then(tasks => $scope.tasks = tasks)
+  }
+})

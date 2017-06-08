@@ -20,7 +20,7 @@ const TaskSchema = new Schema({
     default: false
   },
   dateRealized: {
-    type: String,
+    type: Number,
     required: true
   },
   description: {
