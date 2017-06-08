@@ -2,8 +2,9 @@ angular.module('tasksAgend')
       .controller('tasksController', function ($scope, $rootScope, apiTasksService) {
         $rootScope.date = new Date()
         var tomorrow = $scope.date
-        let dateTomorrow = +tomorrow
-        apiTasksService.getTaskByDate(dateTomorrow)
+       
+        // const newTomorrow = tomorrow.setDate(tomorrow.getDate()) 
+        apiTasksService.getTaskByDate(tomorrow)
 	          .then(tasks => {
 	            $scope.tasks = tasks
 	          })
@@ -11,9 +12,8 @@ angular.module('tasksAgend')
    
         $scope.movingDayNext = function () {
           var tomorrow = $scope.date
-          tomorrow.setDate(tomorrow.getDate() + 1)
-          const dateTomorrow = +tomorrow
-	          apiTasksService.getTaskByDate(dateTomorrow)
+          newTomorrow = tomorrow.setDate(tomorrow.getDate() + 1)
+	          apiTasksService.getTaskByDate(newTomorrow)
 	          .then(tasks => {
 	            $scope.tasks = tasks
 	          })
