@@ -101,9 +101,9 @@ input, textarea{
 	}
 }
 .container-adjust{
-	width: 80%;
+	width: 100%;
 	margin: 0 auto;
-	@media (min-width: $bp-medium){
-		width: 100%;
+	@media (min-width: $bp-small){
+		width: 70%;
 	}
 }

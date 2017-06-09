@@ -127,15 +127,16 @@
 	text-align: center;
 }
 #check1{
-	width: 40px;
-	height: 40px;
-
+	width: 60px;
+	height: 20px;
+	color: $c-white;
 }
+
 .title>a{
 	color: $c-black;
 }
-.container-adjust{
-	width: 80%;
-	margin: 0 auto;
+.done {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-
