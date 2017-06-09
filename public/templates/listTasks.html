@@ -13,25 +13,27 @@
             </div>
         </div>
     </nav>
+ <div class="container-adjust">   
     <div class="container">
         <div class="list-container">
             <ul class="list-group">
                 <li class="list-group-item" ng-repeat="task in tasks">
                     <ul class="task ">
-                        <li  class="title list-unstyled"><i class="completed-task fa fa-check" aria-hidden="true"></i>{{task.userName}}> {{task.userName2}}</li></strike>
-
+                        <li  class="title list-unstyled"><i class="completed-task fa fa-check" aria-hidden="true"></i>{{task.userName}}  >  {{task.userName2}}</li></strike>
+                        
                         <li class="title list-unstyled"><a href="detailTask.html">{{task.title}}</a></li>
 
                         <li class="title list-unstyled"><a>{{task.description}}</a></li>
 
                         <li class="list-unstyled">
-                            <input id="check1" type="checkbox" name="check" value="check1">
+                            <button class='btn btn' ng-click='markCompleted(task._id)' id="check1"></button>
                         </li>
                     </ul>
                 </li>
             </ul>
         </div>
     </div>
+</div>    
     <div class="date">
         <h2 ng-bind="selectedDay | date:'dd/MM/yyyy'">{{selectedDay}}</h2>
     </div>
@@ -39,13 +41,15 @@
         <i class="fa fa-calendar fa-3x" aria-hidden="true"></i>
     </div>
     <footer>
+     <div class="container-adjust">
         <div class="addTask">
             <a href="#/newTask"><img src="img/add.png" class="addTaskPlus"></a>
         </div>
         <div class="pager-arrows">
-            <button ng-click="movingDayBack()" class="arrow-left"><i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i></button>
-            <button ng-click="movingDayNext()" class="arrow-right"><i class="fa fa-arrow-right fa-3x" aria-hidden="true"></i></button>
+            <a  ng-click="movingDayBack()" class="btn arrow-left"><i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i></a>
+            <a ng-click="movingDayNext()" class="btn arrow-right"><i class="fa fa-arrow-right fa-3x" aria-hidden="true"></i></a>
         </div>
+       </div> 
     </footer>
 </body>
 

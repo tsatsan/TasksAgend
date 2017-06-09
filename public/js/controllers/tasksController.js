@@ -16,4 +16,10 @@ angular.module('tasksAgend')
     apiTasksService.getTaskByDate($scope.selectedDay)
 			.then(tasks => $scope.tasks = tasks)
   }
+
+  $scope.markCompleted = function (id) {
+    console.log(id)
+    apiTasksService.showCompleted(id)
+      .then(tasks => $scope.tasks = tasks)
+  }
 })

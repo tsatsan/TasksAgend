@@ -5,8 +5,6 @@ function addTask (req, res) {
   let {title, userName, userName2, description, dateRealized} = req.body
   dateRealized = moment(+dateRealized).valueOf()
   const newTask = new Task({title, userName, userName2, description, dateRealized})
-  
-  console.log( 'req body' + newTask)
 
   newTask.save()
     .then(msg => {

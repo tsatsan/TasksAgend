@@ -100,3 +100,10 @@ input, textarea{
 		width: 100%;
 	}
 }
+.container-adjust{
+	width: 80%;
+	margin: 0 auto;
+	@media (min-width: $bp-medium){
+		width: 100%;
+	}
+}

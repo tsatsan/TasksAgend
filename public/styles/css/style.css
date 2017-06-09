@@ -188,6 +188,13 @@ input, textarea {
   .container {
     width: 100%; } }
 
+.container-adjust {
+  width: 80%;
+  margin: 0 auto; }
+  @media (min-width: 768px) {
+    .container-adjust {
+      width: 100%; } }
+
 /* Index page
 -------------------------------------------------------------- */
 .start-page {
@@ -333,7 +340,9 @@ input, textarea {
 
 .completed-task {
   color: green;
-  padding: 0 5px 0 5px; }
+  padding: 0 5px 0 5px;
+  text-decoration: line-through;
+  display: none; }
 
 .matched {
   font-weight: 200;
@@ -356,11 +365,15 @@ input, textarea {
   text-align: center; }
 
 #check1 {
-  width: 20px;
-  height: 20px; }
+  width: 40px;
+  height: 40px; }
 
 .title > a {
   color: #000000; }
+
+.container-adjust {
+  width: 80%;
+  margin: 0 auto; }
 
 .msg-acount {
   color: white;
