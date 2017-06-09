@@ -366,16 +366,10 @@ input, textarea {
 
 #check1 {
   width: 60px;
-  height: 20px;
   color: #fff; }
 
 .title > a {
   color: #000000; }
-
-.done {
-  display: flex;
-  justify-content: center;
-  align-items: center; }
 
 .msg-acount {
   color: white;
