@@ -2,10 +2,9 @@ angular.module('tasksAgend')
 	.controller('tasksController', function ($scope, $timeout, apiTasksService, $rootScope, $location, $window) {
   const today = +new Date()
   $scope.selectedDay = today
-
-  apiTasksService.getTaskByDate($scope.selectedDay)
+    apiTasksService.getTaskByDate($scope.selectedDay)
     .then(tasks => $scope.tasks = tasks)
-
+ 
   $scope.movingDayNext = function () {
        $scope.calendar = false
     $scope.selectedDay = moment($scope.selectedDay).add(1, 'days').valueOf()
@@ -41,9 +40,9 @@ angular.module('tasksAgend')
     }
   $scope.updateTask = function (id) {
     apiTasksService.updateTask(id)
-    console.log(id)
-       $location.path('#/detailTask', $scope.tasks)
+       $location.path('/detailTask', $scope.tasks)
       }
+
    $scope.showCalendarInput = function () {
     $scope.calendar = true
   }

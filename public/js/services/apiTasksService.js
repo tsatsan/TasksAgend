@@ -15,7 +15,7 @@ angular.module('tasksAgend')
                 .then(response => response.data)
       }
       function showCompleted (id) {
-        return $http.put('/tasks/id/' + id)
+        return $http.put('/task/id/' + id)
                 .then(response => response.data)
       }
       function removeTask (id) {
@@ -26,12 +26,17 @@ angular.module('tasksAgend')
         return $http.put('/task/id/' + id)
                 .then(response => response.data)
       }
+      function getTaskById (id) {
+        return $http.get('/tasks/date/' + id)
+                .then(response => response.data)
+      }
       return {
         getAll,
         addTask,
         getTaskByDate,
         showCompleted,
         removeTask,
-        updateTask
+        updateTask,
+        getTaskById
       }
     })

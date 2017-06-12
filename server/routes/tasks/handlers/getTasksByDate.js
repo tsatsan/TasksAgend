@@ -11,7 +11,7 @@ function getTasksByDate (req, res) {
     'dateRealized': {
       '$gte': dayToLocate,
       '$lt': dayAfter
-  	}
+    }
   }
   Task.find(query)
     .then(task => {

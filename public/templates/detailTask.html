@@ -1,41 +1,40 @@
 <nav class="navbar" id="navbar-tuning-tasks">
     <div class="container-fluid">
         <div class="arrow-nav">
-           <a href="/#/listTasks"><i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i></a>
+            <a href="/#/listTasks"><i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i></a>
         </div>
         <div class="brand-name-newTask">
-            <h4>Detail</h4>
+            <h4>Detail Task {{3+4}}</h4>
         </div>
     </div>
 </nav>
 <div class="container">
     <div class="container-adjust">
-        <form ng-submit="updateTask(task._id)" ng-repeat="task in tasks">
+        <form ng-submit="addNewTask()">
             <div class="new-task">
                 <p>FROM</p>
-                <input class="task-item">
+                <input class="task-item" value="{{ userName }}" ng-model="userName">
             </div>
             <div class="new-task">
-                <p>TO {{3+4}}</p>
-                <select class="form-control task-item" ng-model="userName2">
+                <p>TO</p>
+                <select class="form-control task-item" ng-model="userName2" autofocus>
                     <option value="jordi">Jordi</option>
                     <option value="juanma">JuanMa</option>
                     <option value="alex">Alex</option>
                     <option value="jaume">Jaume</option>
-                  </select>
+                </select>
             </div>
             <div class="new-task">
                 <p>DATA</p>
-                 <input class="task-item" type="date"  ng-model="selectedDay" autofocus>
+                <input class="task-item" type="date" ng-model="dateRealized" autofocus>
             </div>
             <div class="new-task-text">
                 <p>DESCRIPTION</p>
-                <textarea ng-model="description" ></textarea>
+                <textarea ng-model="description"></textarea>
             </div>
             <div>
-            <button class="btn btn-color create-button btn-net"><a href="listTasks.html">SAVE</a></button>
+                <button class="btn btn-color create-button btn-net" type="submit">SAVE</button>
             </div>
         </form>
     </div>
 </div>
-

@@ -18,8 +18,8 @@ angular.module('tasksAgend', ['ngRoute'])
         templateUrl: 'templates/newTask.html',
         controller: 'newTaskController'
       })
-      .when('/deatilTask', {
+      .when('/detailTask', {
         templateUrl: 'templates/detailTask.html',
-        controller: 'detailsController'
+        controller: 'detailController'
       })
   })

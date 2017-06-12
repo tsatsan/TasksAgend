@@ -2,9 +2,9 @@ const Task = require('../../../models/Task')
 
 function updateTask (req, res) {
   const { id } = req.params
-  let { description, userName2, dateRealized } = req.body
 
-  console.log(id)
+  let { description, userName2, dateRealized } = req.body
+  console.log({ description, userName2, dateRealized } )
 
   const updateData = {}
   if (description) updateData.description = description
@@ -21,3 +21,4 @@ function updateTask (req, res) {
 }
 
 module.exports = updateTask
+
