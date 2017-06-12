@@ -195,6 +195,18 @@ input, textarea {
     .container-adjust {
       width: 70%; } }
 
+.btn-ok {
+  background-color: #A4A4A4;
+  color: #fff; }
+
+.btn-remove {
+  background-color: #A4A4A4;
+  color: #fff; }
+
+.btn-edit {
+  background-color: #A4A4A4;
+  color: #fff; }
+
 /* Index page
 -------------------------------------------------------------- */
 .start-page {
@@ -217,7 +229,8 @@ input, textarea {
 .start {
   display: flex;
   align-items: center;
-  flex-direction: column; }
+  flex-direction: column;
+  height: 2000px; }
   .start button {
     width: 300px;
     height: 50px;
@@ -239,7 +252,8 @@ input, textarea {
     float: right; }
   .navbar-start .login {
     color: white;
-    margin: 10px 30px; }
+    margin: 10px 30px;
+    position: absolute; }
   .navbar-start i {
     padding-right: 10px; }
 
@@ -263,7 +277,7 @@ input, textarea {
 .list-group {
   margin-top: 40px;
   overflow-y: scroll;
-  height: 300px; }
+  height: 343px; }
   .list-group .list-group-item:hover {
     background-color: #E6E6E6; }
   .list-group a {
@@ -273,7 +287,7 @@ input, textarea {
 .addTask {
   display: flex;
   justify-content: center;
-  margin-bottom: -33px; }
+  margin-bottom: -54px; }
 
 .addTaskPlus {
   height: 70px;
@@ -297,10 +311,6 @@ input, textarea {
   font-weight: 200;
   padding-top: 5px; }
 
-.task-item, .detail-item, .new-task-text {
-  border-bottom: 2px solid #E6E6E6;
-  padding-bottom: 2%; }
-
 .brand-name-newTask, .brand-name-itemTask {
   text-align: center;
   display: flex;
@@ -312,11 +322,6 @@ input, textarea {
     justify-content: center;
     font-weight: 200; }
 
-.task {
-  display: flex;
-  justify-content: space-between;
-  padding: 0; }
-
 .create-button {
   margin-top: 10%;
   height: 50px;
@@ -326,14 +331,8 @@ input, textarea {
     color: #fff;
     font-weight: bold; }
 
-.fa-calendar {
-  color: #E6E6E6;
-  float: right;
-  margin-right: 36px;
-  margin-top: -44px; }
-  @media (min-width: 550px) {
-    .fa-calendar {
-      margin-right: 150px; } }
+.calendar input {
+  font-size: 25px; }
 
 .dropdown-position {
   float: right; }
@@ -351,7 +350,7 @@ input, textarea {
 .logo-name {
   display: flex;
   flex-direction: row;
-  width: 100px;
+  align-items: center;
   font-family: "Comfortaa", sans-serif; }
 
 .pager-arrows {
@@ -370,6 +369,21 @@ input, textarea {
 
 .title > a {
   color: #000000; }
+
+.icon {
+  margin-right: 6px; }
+
+.login-list-tasks {
+  margin: 16px 3px; }
+
+.navbar-brand1 {
+  display: none;
+  padding: 0 0 0 12px; }
+  @media (min-width: 480px) {
+    .navbar-brand1 {
+      display: flex;
+      align-items: center;
+      color: white; } }
 
 .msg-acount {
   color: white;
@@ -392,35 +406,31 @@ input, textarea {
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  -o-background-size: cover; }
+  -o-background-size: cover;
+  height: 2000px; }
 
 .container-users {
   display: flex;
-  justify-content: center; }
+  flex-wrap: wrap; }
 
-.jordi-image {
+.user-image {
   width: 100px;
   height: 100px;
   border: 1px solid #fff;
   margin: 0;
   padding: 0;
   border-radius: 800px;
-  overflow: hidden;
-  margin: 210px 70px 0 70px; }
+  overflow: hidden; }
+  .user-image:hover {
+    background: #000000;
+    opacity: 0.5; }
 
-.luna-image {
-  width: 100px;
-  height: 100px;
-  border: 1px solid #fff;
-  margin: 0;
-  padding: 0;
-  border-radius: 800px;
-  overflow: hidden;
-  margin: 210px 70px 0 70px; }
+.user-name {
+  color: #fff;
+  margin: 0; }
 
-.luna-image:hover, .jordi-image:hover {
-  background: #000000;
-  opacity: 0.5; }
+.user {
+  margin-right: 10px; }
 
 /* listTasks detailTasks newTasks
 -------------------------------------------------------------- */

@@ -3,10 +3,6 @@ const Schema = mongoose.Schema
 const collection = 'tasks'
 
 const TaskSchema = new Schema({
-  title: {
-    type: String,
-    required: true
-  },
   userName: {
     type: String,
     required: true

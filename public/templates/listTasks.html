@@ -3,53 +3,63 @@
         <div class="container-fluid">
             <div class="brand-name">
                 <div class="logo-name">
-                    <a class="navbar-brand" href="index.html">
-                        <img alt="Brand" class='brand' src="img/taskagend.png">
-                    </a>
+                    <a href="/#"><img alt="Brand" class='brand' src="img/taskagend.png"></a>
+                    <a class="navbar-brand1" href="/#/startUsers.html">
                     <h3>taskagen</h3>
+                    </a>
                 </div>
                 <h4 class="nav-list-tasks">List Tasks</h4>
-                <a class="login-list-tasks" href="sign_in.html">Hola Jordi  <i class="fa fa-user-o" aria-hidden="true"></i>{{ nameUser }}</a>
+                <a class="login-list-tasks" href="/#/startUsers">{{ userName }}  <i class="fa fa-user-o" aria-hidden="true"></i></a> 
             </div>
         </div>
     </nav>
- <div class="container-adjust">   
-    <div class="container">
-        <div class="list-container">
-            <ul class="list-group">
-                <li class="list-group-item" ng-repeat="task in tasks">
-                    <ul class="task ">
-                        <li  class="title list-unstyled"><i class="completed-task fa fa-check" aria-hidden="true"></i>{{task.userName}}  >  {{task.userName2}}</li></strike>
-                        
-                        <li class="title list-unstyled"><a href="detailTask.html">{{task.title}}</a></li>
-
-                        <li class="title list-unstyled"><a>{{task.description}}</a></li>
-
-                        <li class="list-unstyled">
-                          <button class='btn-xs' ng-click='markCompleted(task._id)' id="check1">done</button>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+    <div class="container-adjust">
+        <div class="container">
+            <div class="list-container">
+                <ul class="list-group">
+                    <li class="list-group-item" ng-repeat="task in tasks">
+                        <ul class="row task-item">
+                           <a href="/#/detailTask"><li class="title list-unstyled col-xs-5 col-md-4"><i class="completed-task fa fa-check" aria-hidden="true"></i> {{task.userName}} > {{task.userName2}}</li>
+                            <li class="title list-unstyled col-xs-7 col-md-4">{{task.description}}</li></a>
+                        </ul>
+                        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                            <div class="btn-group btn-group-sm" role="group">
+                                <button type="button" ng-click="removeTask(task._id)" class="btn btn-default btn-remove"><i class="glyphicon glyphicon-remove icon"></i>Remove</button>
+                            </div>
+                            <div class="btn-group btn-group-sm" role="group">
+                                <button type="button" ng-click="updateTask(task._id)" class="btn btn-default btn-edit"><i class="glyphicon glyphicon-pencil icon"></i>Edit</button>
+                            </div>
+                            <div class="btn-group btn-group-sm" role="group">
+                                <button type="button" ng-click="showCompleted(task._id)" class="btn btn-default btn-ok"><i class="glyphicon glyphicon-ok icon"></i>Done</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
-</div>    
     <div class="date">
-        <h2 ng-bind="selectedDay | date:'dd/MM/yyyy'">{{selectedDay}}</h2>
+        <h2 ng-bind="selectedDay | date:'dd/MM/yyyy'" ng-hide="calendar==true">{{selectedDay}}</h2>
+        <form>
+             <div class="calendar"> 
+              <div class="input-date"> 
+                <input ng-click="selectNewDate()" ng-show="calendar==true" type="date"  ng-model="selectedDay" ng-bind="selectedDay | date:'dd/MM/yyyy'" aria-hidden="true">
+              </div>
+              <i class="btn fa fa-calendar fa-3x" aria-hidden="true" ng-click=" showCalendarInput()"></i></input>
+            </div>
+            </form>
     </div>
-    <div class="calendar">
-        <i class="fa fa-calendar fa-3x" aria-hidden="true"></i>
-    </div>
+   
     <footer>
-     <div class="container-adjust">
-        <div class="addTask">
-            <a href="#/newTask"><img src="img/add.png" class="addTaskPlus"></a>
+        <div class="container-adjust">
+            <div class="addTask">
+                <a href="#/newTask"><img src="img/add.png" class="addTaskPlus"></a>
+            </div>
+            <div class="pager-arrows">
+                <a ng-click="movingDayBack()" class="btn arrow-left"><i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i></a>
+                <a ng-click="movingDayNext()" class="btn arrow-right"><i class="fa fa-arrow-right fa-3x" aria-hidden="true"></i></a>
+            </div>
         </div>
-        <div class="pager-arrows">
-            <a  ng-click="movingDayBack()" class="btn arrow-left"><i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i></a>
-            <a ng-click="movingDayNext()" class="btn arrow-right"><i class="fa fa-arrow-right fa-3x" aria-hidden="true"></i></a>
-        </div>
-       </div> 
     </footer>
 </body>
 
