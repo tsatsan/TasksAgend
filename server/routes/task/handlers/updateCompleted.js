@@ -1,13 +1,10 @@
 const Task = require('../../../models/Task')
 const moment = require('moment')
 
-function showCompleted (req, res){
-	console.log(req.params)
-  
-  const {_id, completed=true} = req.params
-  
-
-  Task.findByIdAndUpdate(_id, completed)
+function updateCompleted (req, res){
+  const { id } = req.params
+  const dataToUpdate = { completed: true }
+  Task.findByIdAndUpdate(id, dataToUpdate)
     .then(msg => {
       res.status(200).json(msg)
     })
@@ -16,4 +13,4 @@ function showCompleted (req, res){
     })
 }
 
-module.exports = showCompleted
+module.exports = updateCompleted

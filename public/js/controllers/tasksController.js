@@ -27,9 +27,10 @@ angular.module('tasksAgend')
       .then(tasks => $scope.tasks = tasks)
   }
 
-  $scope.showCompleted = function (id, completed) {
-    completed = true
-    apiTasksService.showCompleted(id, completed)
+  $scope.updateCompleted = function (id, dataToUpdate) {
+    apiTasksService.updateCompleted(id, dataToUpdate)
+
+    console.log(dataToUpdate)
       .then(tasks => $scope.tasks = tasks)
   }
 
@@ -40,7 +41,7 @@ angular.module('tasksAgend')
     }
   $scope.updateTask = function (id) {
     apiTasksService.updateTask(id)
-       $location.path('/detailTask', $scope.tasks)
+       $location.path('/detailTask', $rootScope.tasks)
       }
 
    $scope.showCalendarInput = function () {
