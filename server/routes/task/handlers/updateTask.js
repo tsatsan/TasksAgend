@@ -3,7 +3,7 @@ const Task = require('../../../models/Task')
 function updateTask (req, res) {
   const { id } = req.params
   let { newFrom, newTo, newDate, newDescription } = req.body
-  newDate = +newDate
+console.log(newDate)
   const updateData = {}
   if (newFrom) updateData.userName = newFrom
   if (newTo) updateData.userName2 = newTo
