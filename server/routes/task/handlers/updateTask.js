@@ -2,23 +2,17 @@ const Task = require('../../../models/Task')
 
 function updateTask (req, res) {
   const { id } = req.params
-
-  let { description, userName2, dateRealized } = req.body
-  console.log({ description, userName2, dateRealized } )
-
+  let { newFrom, newTo, newDate, newDescription } = req.body
+  newDate = +newDate
   const updateData = {}
-  if (description) updateData.description = description
-  if (userName2) updateData.description = description
-  if (dateRealized) updateData.dateRealized = dateRealized
+  if (newFrom) updateData.userName = newFrom
+  if (newTo) updateData.userName2 = newTo
+  if (newDate) updateData.dateRealized = newDate
+  if (newDescription) updateData.description = newDescription
 
   Task.findByIdAndUpdate(id, updateData)
-  .then(msg => {
-    res.status(200).json(msg)
-  })
-  .catch(err => {
-    res.status(500).json(err)
-  })
+    .then(() => res.status(200).json({ msg: `task w/ id ${id} updated properly`}))
+    .catch(() => res.status(500).json({ msg: `error updating  task w/ id ${id}`}))
 }
 
 module.exports = updateTask
-

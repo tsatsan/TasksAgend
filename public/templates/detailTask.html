@@ -11,25 +11,25 @@
 <div class="container">
     <div class="container-adjust">
         <form>
-            <div ng-repeat="task in tasks">
-                <div class="new-task">
+            <div>
+                <div class="new-task" >
                     <p>FROM</p>
-                    <input class="task-item" ng-value="{{task.userName}}" ng-model="userName">
+                    <input class="task-item" ng-value="task.userName" ng-model="newFrom">
                 </div>
                 <div class="new-task">
                     <p>TO</p>
-                    <input class="task-item" ng-value="{{ task.userName2 }}" ng-model="userName2">
+                    <input class="task-item" ng-value="task.userName2" ng-model="newTo">
                 </div>
                 <div class="new-task">
                     <p>DATA</p>
-                    <input class="task-item" ng-value="{{ task.dateRealized }}" type="date" ng-model="dateRealized" autofocus>
+                    <input class="task-item" ng-value="task.dateRealized | date:'dd/MM/yyyy'" ng-model="newDate">
                 </div>
                 <div class="new-task-text">
                     <p>DESCRIPTION</p>
-                    <textarea ng-value="{{ task.description }}" ng-model="description"></textarea>
+                    <textarea ng-value="task.description" ng-model="newDescription"></textarea>
                 </div>
             </div> 
-                     <button class="btn btn-color create-button btn-net" ng-click="updateTask()">SAVE</button>  
+                     <button class="btn btn-color create-button btn-net" ng-click="updateTask(task._id)">SAVE</button>  
         </form>
     </div>
 </div>

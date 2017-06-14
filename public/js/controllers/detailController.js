@@ -1,14 +1,13 @@
 angular.module('tasksAgend')
-  .controller('detailController', function ($scope, $location, apiTasksService, id, $rootScope) {
-    apiTasksService.getTaskById(id)
-    .then(tasks => $rootScope.tasks = tasks)
-      $scope.updateTask = function () {
-     let {userName, userName2, dateRealized, title, description} = $rootScope
-     dateRealized = moment(+dateRealized).valueOf()
-     apiTasksService.updateTask({userName, userName2, dateRealized, title, description})
-         .then(tasks => {
-           $scope.tasks = tasks
-           $location.path('/listTasks', $scope.tasks)
-         })
+  .controller('detailController', function ($scope, $location, apiTasksService) {
+     
+    $scope.updateTask = function (id) {
+    const {newFrom, newTo, newDate, newDescription} = $scope
+   	// console.log(id)
+     apiTasksService.updateTask({newFrom, newTo, newDate, newDescription}, id)
+         .then(task => {
+           $scope.task = task
+        })
     }
-  })
+})
+      

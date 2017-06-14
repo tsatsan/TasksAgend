@@ -11,23 +11,23 @@ angular.module('tasksAgend')
                 .then(response => response.data)
       }
       function getTaskByDate (date) {
-        return $http.get('/tasks/date/' + date)
+        return $http.get(`/tasks/date/${date}`)
                 .then(response => response.data)
       }
       function updateCompleted (id) {
-        return $http.put('/task/id/' + id)
+        return $http.put(`/task/id/${id}`)
                 .then(response => response.data)
       }
       function removeTask (id) {
-        return $http.delete('/task/id/' + id)
+        return $http.delete(`/task/id/${id}`)
                 .then(response => response.data)
       }
-      function updateTask (id) {
-        return $http.put('/task/id/' + id)
+      function updateTask (data, id) {
+        return $http.put(`/task/update/${id}`, data)
                 .then(response => response.data)
       }
       function getTaskById (id) {
-        return $http.get('/task/id/' + id)
+        return $http.get(`/task/id/${id}`)
                 .then(response => response.data)
       }
       return {

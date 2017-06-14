@@ -13,6 +13,7 @@ const TaskSchema = new Schema({
   },
   completed: {
     type: Boolean,
+    required: false,
     default: false
   },
   dateRealized: {

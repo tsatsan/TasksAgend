@@ -17,7 +17,7 @@
     }
     a {
     text-decoration: none;
-    color: $c-gray;
+    color: $c-gray-moreFort;
 	}		
 }
 .addTask {
@@ -144,4 +144,7 @@
 	}
 padding: 0 0 0 12px;
 	
+}
+.completed{
+text-decoration: line-through;
 }

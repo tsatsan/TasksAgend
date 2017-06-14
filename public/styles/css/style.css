@@ -282,7 +282,7 @@ input, textarea {
     background-color: #E6E6E6; }
   .list-group a {
     text-decoration: none;
-    color: #E6E6E6; }
+    color: #585858; }
 
 .addTask {
   display: flex;
@@ -384,6 +384,9 @@ input, textarea {
       display: flex;
       align-items: center;
       color: white; } }
+
+.completed {
+  text-decoration: line-through; }
 
 .msg-acount {
   color: white;
