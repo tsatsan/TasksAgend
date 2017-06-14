@@ -2,6 +2,14 @@ angular.module('tasksAgend', ['ngRoute'])
   .config(function ($routeProvider, $locationProvider) {
     $locationProvider.hashPrefix('')// For fix URL issues "/!#/" -> "/#/"
     $routeProvider
+      .when('/login', {
+        templateUrl: 'templates/login.html',
+        controller: 'loginController'
+      })
+      .when('/register', {
+        templateUrl: 'templates/register.html',
+        controller: 'registerController'
+      })
       .when('/', {
         templateUrl: 'templates/index.html',
         controller: 'indexController'

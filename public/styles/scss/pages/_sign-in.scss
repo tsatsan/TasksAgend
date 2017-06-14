@@ -19,3 +19,13 @@
 	color: $c-gray;
 	text-align: center;
 }
+
+.startBack {
+	background: url(../../img/background-image-users.jpg) center center fixed;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	height: 800px;
+
+}

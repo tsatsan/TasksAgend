@@ -10,23 +10,22 @@
 	margin: 0;
 
 }
-.startBack {
-	background: url(../../img/background-image-users.jpg) center center fixed;
-	background-repeat: no-repeat;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
 
-}
 .start{
 	display: flex;
 	align-items: center;
 	flex-direction: column;
 	height: 2000px;
-	button{
+	.login{
 		width: 300px;
 		height: 50px;
 		margin-top: 70px;
+		
+	.register{		
+		width: 300px;
+		height: 50px;
+		margin-top: 10px;
+		}
 	}
 	h1 {
 		margin-top: 60px;
