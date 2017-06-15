@@ -1,21 +1,27 @@
 angular.module('tasksAgend')
-  .controller('loginController', function($scope, $rootScope, apiTasksService, authService) {
+  .controller('LoginController', function($scope, $rootScope, $location, ApiService, AuthService, toastr) {
     $rootScope.section = "login"
 
     $scope.login = function (event) {
       event.preventDefault()
       const { username, password } = $scope
 
-      authService.login(username, password)
-           .then(msg => {
-             console.log(msg)
-            //$location.path('/profile')
-        })
-            .catch(console.log)
+      AuthService.login(username, password)
+          .then(msg => {
+            console.log(msg)
+            toastr.success('Success logging in', 'Hello')
+            $rootScope.section = "main"
+            $location.path('/main')
+          })
+          .catch( () => {
+            toastr.error('Wrong Username/Password ', 'Error prova')
+          })
     }
 
-	  // $scope.getData = function () {
-	  //   DataService.getSecretData()
-			// 		.then(data => $scope.message = data.msg)
-		 // }
+    $scope.getData = function () {
+      DataService.getSecretData()
+          .then(data => $scope.message = data.msg)
+     }
+
+
   })

@@ -4,11 +4,11 @@ angular.module('tasksAgend', ['ngRoute'])
     $routeProvider
       .when('/login', {
         templateUrl: 'templates/login.html',
-        controller: 'loginController'
+        controller: 'LoginController'
       })
       .when('/register', {
         templateUrl: 'templates/register.html',
-        controller: 'registerController'
+        controller: 'RegisterController'
       })
       .when('/', {
         templateUrl: 'templates/index.html',
@@ -30,4 +30,9 @@ angular.module('tasksAgend', ['ngRoute'])
         templateUrl: 'templates/detailTask.html',
         controller: 'detailController'
       })
+      .when('/logout', {
+        template: '<h1>Logging out..</h1>',
+        controller: 'LogoutController'
+      })
+      .otherwise('/login')
   })

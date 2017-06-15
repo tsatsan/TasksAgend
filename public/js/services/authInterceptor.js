@@ -1,7 +1,7 @@
 angular.module('tasksAgend')
-	.factory('authInterceptor', function (storageService) {
+	.factory('AuthInterceptor', function (StorageService) {
   function addToken (config) {
-    const token = storageService.getToken()
+    const token = StorageService.getToken()
     if (token) {
       config.headers = config.headers || {}
       config.headers.Authorization = 'JWT ' + token

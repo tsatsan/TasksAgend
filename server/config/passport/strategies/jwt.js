@@ -2,7 +2,7 @@ const JwtStrategy = require('passport-jwt').Strategy;
 const ExtractJwt = require('passport-jwt').ExtractJwt;
 
 const User = require(__base + 'models/User')
-const SECRET = 'donottelltoanyonethis'
+const SECRET = process.env.SECRET
 
 const jwtOptions = {
   secretOrKey: SECRET,

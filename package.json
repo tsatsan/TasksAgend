@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "prestart": "npm install",
-    "postinstall": "bower install",
     "start": "node index",
     "dev": "nodemon index"
   },
