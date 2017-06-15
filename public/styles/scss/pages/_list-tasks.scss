@@ -23,7 +23,7 @@
 .addTask {
 	display: flex;
 	justify-content: center;
-	margin-bottom:-54px;
+	margin-bottom:-46px;
 }
 
 .addTaskPlus {
@@ -89,6 +89,9 @@
   // }
   input {
   	font-size: 25px;
+  	    border: none;
+    width: 50%;
+    margin-left: 40px;
   }
 }
 .dropdown-position{

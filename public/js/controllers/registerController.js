@@ -1,5 +1,5 @@
 angular.module('tasksAgend')
-	.controller('registerController', function($scope, $rootScope, AuthService) {
+	.controller('registerController', function($scope, $rootScope, authService) {
 
 		$rootScope.section = 'register'
 
@@ -8,7 +8,7 @@ angular.module('tasksAgend')
 			event.preventDefault()
 			const { username, password } = $scope
 
-			AuthService.register(username, password)
+			authService.register(username, password)
 				.then(console.log)
 				.catch(console.log)
 		}

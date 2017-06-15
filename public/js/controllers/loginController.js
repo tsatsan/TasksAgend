@@ -1,12 +1,12 @@
 angular.module('tasksAgend')
-  .controller('loginController', function($scope, $rootScope, apiTasksService, AuthService) {
+  .controller('loginController', function($scope, $rootScope, apiTasksService, authService) {
     $rootScope.section = "login"
 
     $scope.login = function (event) {
       event.preventDefault()
       const { username, password } = $scope
 
-      AuthService.login(username, password)
+      authService.login(username, password)
            .then(msg => {
              console.log(msg)
             //$location.path('/profile')

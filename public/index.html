@@ -13,7 +13,7 @@
 	<!-- CSS Frameworks & Libraries -->
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	
+	<link rel="stylesheet" href="https://npmcdn.com/angular-toastr/dist/angular-toastr.css" />	
 
 	<!-- Custom CSS -->
 	<link rel="stylesheet" href="styles/css/style.css">
@@ -24,21 +24,26 @@
 	<ng-view></ng-view>
 
 	<script src="/bower_components/moment/min/moment.min.js"></script>
+	<script src="/bower_components/jquery/dist/jquery.min.js"></script>
 
 <!-- AngularJS -->
 	<script src="/bower_components/angular/angular.min.js"></script>
 	<script src="/bower_components/angular-route/angular-route.min.js"></script>
 	<script src="/bower_components/angular-moment/angular-moment.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular-jwt/dist/angular-jwt.min.js"></script>
+	<script src="https://npmcdn.com/angular-toastr/dist/angular-toastr.tpls.js"></script>
+
 
 <!-- MAIN ANGULAR -->
 	<script src="/js/app.js"></script>
 	<script src="/js/config.js"></script>
+	<!-- <script src="/js/run.js"></script> -->
 
 <!-- SERVICES/FACTORY -->
-	<script src="/js/services/apiTasksService.js"></script>
-	<script src="/js/services/authInterceptor.js"></script>
-	<script src="/js/services/authService.js"></script>
-	<script src="/js/services/storageService"></script>
+	<script  src="/js/services/apiTasksService.js"></script>
+	<script  src="/js/services/authInterceptor.js"></script>
+	<script  src="/js/services/authService.js"></script>
+	<script  src="/js/services/storageService.js"></script>
 
 <!-- CONTROLLERS -->
 	<script src="/js/controllers/tasksController.js"></script>

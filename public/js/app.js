@@ -1,1 +1,1 @@
-angular.module('tasksAgend', ['ngRoute', 'angularMoment', 'angular-jwt'])
+angular.module('tasksAgend', ['ngRoute', 'angularMoment', 'angular-jwt', 'toastr'])

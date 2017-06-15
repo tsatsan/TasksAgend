@@ -1,7 +1,7 @@
 angular.module('tasksAgend')
   .run(function($rootScope, $location, storageService, authService){
 
-      if ( AuthService.isLoggedIn() ) {
+      if ( authService.isLoggedIn() ) {
         const token = storageService.getToken()
         authService.setCredentials(token)
       }
@@ -10,10 +10,9 @@ angular.module('tasksAgend')
 
         if (next && next.secure) {
           console.log("Secured route.")
-          if ( !AuthService.isLoggedIn() ) {
+          if ( !authService.isLoggedIn() ) {
             $location.path("/login");
           }
         }
-
       });
   })
