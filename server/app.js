@@ -10,8 +10,6 @@ const app = express()
 const routerTasks = require('./routes/tasks')
 const routerTask = require('./routes/task')
 
-const passport = require('./config/passport')
-
 /* static folder */
 app.use(express.static(path.join(__dirname + '/..', 'public')))
 
