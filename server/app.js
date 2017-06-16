@@ -9,8 +9,6 @@ const app = express()
 
 const routerTasks = require('./routes/tasks')
 const routerTask = require('./routes/task')
-const routesAuth = require('./routes/auth')
-const privateRoutes = require('./routes/private')
 
 const passport = require('./config/passport')
 
@@ -23,9 +21,5 @@ app.use(bodyParser.json())
 
 app.use('/tasks', routerTasks)
 app.use('/task', routerTask)
-app.use('/', routesAuth)
-app.use(privateRoutes)
-
-app.use(passport.initialize())
 
 module.exports = app
